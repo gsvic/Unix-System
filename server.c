@@ -18,7 +18,7 @@ int main(int argc, char *argv[]){
 
     int fd;
     struct sockaddr_in address;
-    error("this is an error");
+
     memset(&address,'0',sizeof(address));
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = htonl(INADDR_ANY);
