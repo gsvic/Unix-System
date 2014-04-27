@@ -1,3 +1,10 @@
+/*
+A simple TCP Server Socket that executes Unix bash commands
+
+Developed by :
+Giannakouris -  Salalidis Victor , victorasgs@gmail.com
+*/
+
 #include "apue.h"
 #include "error.c"
 #include <stdio.h>
