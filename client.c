@@ -1,3 +1,15 @@
+/*
+A simple TCP Client Socket that executes Unix bash commands
+
+Developed by :
+Giannakouris -  Salalidis Victor , victorasgs@gmail.com
+
+The header file "apue.h" and the source file "error.c" can be
+both found at the Advanced Programming in the Unix Environment's
+Official Site: http://www.apuebook.com/code3e.html
+
+*/
+
 #include "apue.h"
 #include "error.c"
 #include <stdio.h>
@@ -10,7 +22,8 @@
 
 char *command(int,char *[]);
 
-int main(int argc, char *argv[]){
+int main(int argc, char *argv[])
+{
 
     struct sockaddr_in server;
     int fd;
@@ -35,18 +48,22 @@ int main(int argc, char *argv[]){
     printf("Success, cmd : %s\n",cmd);
 }
 
-char *command(int argc,char *argv[]){
+char *command(int argc,char *argv[])
+{
     char *cmd = NULL;
 
-    if ( argc == 1 ){
+    if ( argc == 1 )
+    {
         err_sys("You must specify some arguments");
     }
-    else{
+    else
+    {
         cmd = malloc(sizeof(char)*strlen(argv[1]));
         if (cmd==NULL) puts("NULL");
         strcpy(cmd,argv[1]);
         int i;
-        for ( i = 2; i < argc; ++i){
+        for ( i = 2; i < argc; ++i)
+        {
             realloc(cmd, strlen(argv[i]));
             strcat(cmd," ");
             strcat(cmd,argv[i]);
@@ -54,7 +71,7 @@ char *command(int argc,char *argv[]){
         return cmd;
     }
 
-    }
+}
 
 
 

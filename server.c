@@ -3,6 +3,11 @@ A simple TCP Server Socket that executes Unix bash commands
 
 Developed by :
 Giannakouris -  Salalidis Victor , victorasgs@gmail.com
+
+The header file "apue.h" and the source file "error.c" can be
+both found at the Advanced Programming in the Unix Environment's
+Official Site: http://www.apuebook.com/code3e.html
+
 */
 
 #include "apue.h"
