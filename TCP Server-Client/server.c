@@ -60,7 +60,6 @@ int main(int argc, char *argv[]){
         //System Call
         system(buff);
 
-        //Cleaning The Buffer
         memset(buff,0,sizeof(buff));
         close(request_fd);
     }
